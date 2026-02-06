@@ -1,0 +1,291 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-consistent-mobile-first-visual-theme-for-kr-staffing-clean-white-background-red-as-primary-accent-neutral-grays-for-borders-text-modern-readable-typography-spacious-layout-and-accessible-contrast-apply-the-theme-consistently-across-all-pages-and-components",
+      "featureTitle": "Implement a consistent, mobile-first visual theme for KR Staffing: clean white background, red as primary accent, neutral grays for borders/text, modern readable typography, spacious layout, and accessible contrast. Apply the theme consistently across all pages and components.",
+      "files": [
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-site-header-navigation-for-kr-staffing-with-logo-and-menu-links-home-jobs-categories-about-us-contact-us-apply-now-include-optional-login-register-entry-points-in-the-header-ui-not-required-to-block-job-browsing",
+      "featureTitle": "Create the site header + navigation for KR Staffing with logo and menu links: Home, Jobs, Categories, About Us, Contact Us, Apply Now. Include optional Login/Register entry points in the header UI (not required to block job browsing).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/auth/AuthButtons.tsx",
+        "frontend/src/components/layout/Header.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-homepage-with-the-requested-sections-and-english-user-facing-copy-that-matches-a-trust-focused-tone-hero-heading-subheading-keyword-city-search-find-jobs-popular-job-searches-popular-job-categories-featured-jobs-job-cards-load-more-why-choose-kr-staffing-testimonials-contact-whatsapp-support-button-contact-form-and-footer-about-quick-links-privacy-policy-terms-conditions-copyright",
+      "featureTitle": "Build the homepage with the requested sections and English user-facing copy that matches a trust-focused tone: Hero (heading, subheading, keyword+city search + Find Jobs), Popular Job Searches, Popular Job Categories, Featured Jobs (job cards + Load More), Why Choose KR Staffing, Testimonials, Contact (WhatsApp support button + contact form), and Footer (About, Quick links, Privacy Policy, Terms & Conditions, copyright).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/jobs/FeaturedJobsSection.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-jobs-listing-page-with-search-and-filters-for-keyword-and-city-rendering-job-cards-with-title-location-company-name-and-apply-now-include-pagination-via-a-load-more-pattern",
+      "featureTitle": "Implement a Jobs listing page with search and filters for keyword and city, rendering job cards with title, location, company name, and Apply Now. Include pagination via a Load More pattern.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/jobs/JobCard.tsx",
+        "frontend/src/pages/JobsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-categories-page-that-lists-the-provided-categories-and-allows-users-to-click-into-a-filtered-jobs-view-by-category",
+      "featureTitle": "Implement a Categories page that lists the provided categories and allows users to click into a filtered Jobs view by category.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/lib/categories.ts",
+        "frontend/src/pages/CategoriesPage.tsx",
+        "frontend/src/pages/JobsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-about-us-contact-us-privacy-policy-and-terms-conditions-pages-with-simple-trust-building-english-copy-describing-kr-staffing-s-process-and-avoiding-unrealistic-claims",
+      "featureTitle": "Add About Us, Contact Us, Privacy Policy, and Terms & Conditions pages with simple, trust-building English copy describing KR Staffing’s process and avoiding unrealistic claims.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/PrivacyPolicyPage.tsx",
+        "frontend/src/pages/TermsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-apply-now-flow-so-that-all-apply-now-buttons-featured-jobs-and-jobs-page-open-a-configurable-google-form-url-in-a-new-tab-if-possible-include-job-title-and-city-as-prefilled-query-parameters-when-the-google-form-supports-it-otherwise-open-the-base-form-url",
+      "featureTitle": "Implement the Apply Now flow so that all Apply Now buttons (Featured Jobs and Jobs page) open a configurable Google Form URL (in a new tab). If possible, include job title and city as prefilled query parameters when the Google Form supports it; otherwise open the base form URL.",
+      "files": [
+        "frontend/src/components/jobs/FeaturedJobsSection.tsx",
+        "frontend/src/components/jobs/JobCard.tsx",
+        "frontend/src/config/krStaffing.ts",
+        "frontend/src/lib/applyNow.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-whatsapp-click-to-chat-integration-via-a-prominent-whatsapp-support-button-homepage-contact-section-and-optionally-a-floating-action-button-also-add-instagram-and-whatsapp-channel-links-in-the-footer-contact-area-all-links-must-be-configurable-phone-number-urls-via-a-single-frontend-configuration-file",
+      "featureTitle": "Add WhatsApp click-to-chat integration via a prominent WhatsApp support button (homepage contact section and optionally a floating action button). Also add Instagram and WhatsApp channel links in the footer/contact area. All links must be configurable (phone number / URLs) via a single frontend configuration file.",
+      "files": [
+        "frontend/src/components/contact/FloatingWhatsAppFab.tsx",
+        "frontend/src/components/contact/WhatsAppButton.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/config/krStaffing.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-admin-friendly-job-management-ui-where-an-authenticated-admin-can-add-edit-jobs-easily-title-company-city-location-category-description-and-any-optional-metadata-like-salary-type-gate-admin-actions-behind-internet-identity-and-a-backend-admin-allowlist-of-principals",
+      "featureTitle": "Build an admin-friendly job management UI where an authenticated admin can add/edit jobs easily (title, company, city/location, category, description, and any optional metadata like salary/type). Gate admin actions behind Internet Identity and a backend admin allowlist of principals.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admin/AdminRouteGuard.tsx",
+        "frontend/src/components/admin/JobEditorDialog.tsx",
+        "frontend/src/components/auth/AuthButtons.tsx",
+        "frontend/src/hooks/useAdminJobs.ts",
+        "frontend/src/pages/admin/AdminDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-homepage-contact-form-name-mobile-number-city-message-to-submit-to-the-backend-and-store-inquiries-for-admin-review-in-the-admin-area-read-only-list-is-sufficient",
+      "featureTitle": "Implement the homepage Contact form (name, mobile number, city, message) to submit to the backend and store inquiries for admin review in the admin area (read-only list is sufficient).",
+      "files": [
+        "frontend/src/components/admin/ContactRequestsList.tsx",
+        "frontend/src/components/contact/ContactForm.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/admin/AdminDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-performance-and-ux-basics-fast-initial-load-skeleton-loading-states-for-job-lists-empty-states-no-jobs-found-and-clear-error-messaging-keep-navigation-simple-and-consistent",
+      "featureTitle": "Ensure performance and UX basics: fast initial load, skeleton/loading states for job lists, empty states (no jobs found), and clear error messaging. Keep navigation simple and consistent.",
+      "files": [
+        "frontend/src/components/jobs/FeaturedJobsSection.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/JobsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-english-for-all-user-facing-text-throughout-the-app-including-headings-buttons-testimonials-labels-maintain-a-trust-building-tone-and-clearly-describe-the-job-application-process-without-unrealistic-promises",
+      "featureTitle": "Use English for all user-facing text throughout the app (including headings, buttons, testimonials, labels). Maintain a trust-building tone and clearly describe the job application process without unrealistic promises.",
+      "files": [
+        "frontend/src/content/copy.ts",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-static-asset-handling-for-generated-brand-images-include-the-generated-logo-and-favicon-in-the-header-and-browser-tab-and-ensure-they-are-served-as-static-files-from-frontend-public-assets-generated",
+      "featureTitle": "Add static asset handling for generated brand images: include the generated logo and favicon in the header and browser tab, and ensure they are served as static files from frontend/public/assets/generated.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a mobile-first staffing & recruitment job portal website for KR Staffing with a clean, trust-building design (white + red accents), featuring job search/listings, categories, featured jobs, testimonials, contact + WhatsApp support, and simple application flow via Google Form, with an admin-friendly way to manage jobs.",
+  "architectural_notes": [
+    "Mobile-first responsive, fast-loading site with simple navigation",
+    "Branding: white background with red highlight color; clean/professional trust-building look",
+    "Application handling via external Google Form (no in-site application processing)",
+    "Integrations: WhatsApp click-to-chat; social links (Instagram, WhatsApp channel)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal, professional KR Staffing wordmark logo in red/black on transparent background (kr-staffing-logo.dim_512x128.png)\n- Square favicon with KR Staffing initials in red on white background (kr-staffing-favicon.dim_128x128.png)\n- Simple flat hero illustration representing job search (abstract people + checklist + location pin) with red accents on white background (hero-illustration.dim_1200x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-consistent-mobile-first-visual-theme-for-kr-staffing-clean-white-background-red-as-primary-accent-neutral-grays-for-borders-text-modern-readable-typography-spacious-layout-and-accessible-contrast-apply-the-theme-consistently-across-all-pages-and-components",
+      "title": "Implement a consistent, mobile-first visual theme for KR Staffing: clean white background, red as primary accent, neutral grays for borders/text, modern readable typography, spacious layout, and accessible contrast. Apply the theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-site-header-navigation-for-kr-staffing-with-logo-and-menu-links-home-jobs-categories-about-us-contact-us-apply-now-include-optional-login-register-entry-points-in-the-header-ui-not-required-to-block-job-browsing",
+      "title": "Create the site header + navigation for KR Staffing with logo and menu links: Home, Jobs, Categories, About Us, Contact Us, Apply Now. Include optional Login/Register entry points in the header UI (not required to block job browsing).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-homepage-with-the-requested-sections-and-english-user-facing-copy-that-matches-a-trust-focused-tone-hero-heading-subheading-keyword-city-search-find-jobs-popular-job-searches-popular-job-categories-featured-jobs-job-cards-load-more-why-choose-kr-staffing-testimonials-contact-whatsapp-support-button-contact-form-and-footer-about-quick-links-privacy-policy-terms-conditions-copyright",
+      "title": "Build the homepage with the requested sections and English user-facing copy that matches a trust-focused tone: Hero (heading, subheading, keyword+city search + Find Jobs), Popular Job Searches, Popular Job Categories, Featured Jobs (job cards + Load More), Why Choose KR Staffing, Testimonials, Contact (WhatsApp support button + contact form), and Footer (About, Quick links, Privacy Policy, Terms & Conditions, copyright).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-jobs-listing-page-with-search-and-filters-for-keyword-and-city-rendering-job-cards-with-title-location-company-name-and-apply-now-include-pagination-via-a-load-more-pattern",
+      "title": "Implement a Jobs listing page with search and filters for keyword and city, rendering job cards with title, location, company name, and Apply Now. Include pagination via a Load More pattern.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-categories-page-that-lists-the-provided-categories-and-allows-users-to-click-into-a-filtered-jobs-view-by-category",
+      "title": "Implement a Categories page that lists the provided categories and allows users to click into a filtered Jobs view by category.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-about-us-contact-us-privacy-policy-and-terms-conditions-pages-with-simple-trust-building-english-copy-describing-kr-staffing-s-process-and-avoiding-unrealistic-claims",
+      "title": "Add About Us, Contact Us, Privacy Policy, and Terms & Conditions pages with simple, trust-building English copy describing KR Staffing’s process and avoiding unrealistic claims.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-apply-now-flow-so-that-all-apply-now-buttons-featured-jobs-and-jobs-page-open-a-configurable-google-form-url-in-a-new-tab-if-possible-include-job-title-and-city-as-prefilled-query-parameters-when-the-google-form-supports-it-otherwise-open-the-base-form-url",
+      "title": "Implement the Apply Now flow so that all Apply Now buttons (Featured Jobs and Jobs page) open a configurable Google Form URL (in a new tab). If possible, include job title and city as prefilled query parameters when the Google Form supports it; otherwise open the base form URL.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-whatsapp-click-to-chat-integration-via-a-prominent-whatsapp-support-button-homepage-contact-section-and-optionally-a-floating-action-button-also-add-instagram-and-whatsapp-channel-links-in-the-footer-contact-area-all-links-must-be-configurable-phone-number-urls-via-a-single-frontend-configuration-file",
+      "title": "Add WhatsApp click-to-chat integration via a prominent WhatsApp support button (homepage contact section and optionally a floating action button). Also add Instagram and WhatsApp channel links in the footer/contact area. All links must be configurable (phone number / URLs) via a single frontend configuration file.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-admin-friendly-job-management-ui-where-an-authenticated-admin-can-add-edit-jobs-easily-title-company-city-location-category-description-and-any-optional-metadata-like-salary-type-gate-admin-actions-behind-internet-identity-and-a-backend-admin-allowlist-of-principals",
+      "title": "Build an admin-friendly job management UI where an authenticated admin can add/edit jobs easily (title, company, city/location, category, description, and any optional metadata like salary/type). Gate admin actions behind Internet Identity and a backend admin allowlist of principals.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-homepage-contact-form-name-mobile-number-city-message-to-submit-to-the-backend-and-store-inquiries-for-admin-review-in-the-admin-area-read-only-list-is-sufficient",
+      "title": "Implement the homepage Contact form (name, mobile number, city, message) to submit to the backend and store inquiries for admin review in the admin area (read-only list is sufficient).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-performance-and-ux-basics-fast-initial-load-skeleton-loading-states-for-job-lists-empty-states-no-jobs-found-and-clear-error-messaging-keep-navigation-simple-and-consistent",
+      "title": "Ensure performance and UX basics: fast initial load, skeleton/loading states for job lists, empty states (no jobs found), and clear error messaging. Keep navigation simple and consistent.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-english-for-all-user-facing-text-throughout-the-app-including-headings-buttons-testimonials-labels-maintain-a-trust-building-tone-and-clearly-describe-the-job-application-process-without-unrealistic-promises",
+      "title": "Use English for all user-facing text throughout the app (including headings, buttons, testimonials, labels). Maintain a trust-building tone and clearly describe the job application process without unrealistic promises.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-asset-handling-for-generated-brand-images-include-the-generated-logo-and-favicon-in-the-header-and-browser-tab-and-ensure-they-are-served-as-static-files-from-frontend-public-assets-generated",
+      "title": "Add static asset handling for generated brand images: include the generated logo and favicon in the header and browser tab, and ensure they are served as static files from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design and build homepage with specified sections (header/nav, hero search, popular searches, categories, featured jobs, why choose, testimonials, contact, footer) in clean white + red style",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create Jobs listing page with job cards, search/filter by keyword and city, and Load More functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement Apply flow linking job applications to a Google Form (Apply Now buttons route to the form)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add WhatsApp click-to-chat support button and include Instagram & WhatsApp channel links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Provide admin-friendly job management (add/edit jobs easily)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Optional user authentication entry points (Login/Register in header)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Content writing in simple English + Hindi mix with trust-focused tone and clear job process explanations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Create backend data models and APIs for job management, including: create job, update job, list jobs (with pagination), and search/filter by keyword, city, and category. Seed the system with a small set of example jobs matching the portal’s domain (delivery/telecaller/field exec/warehouse/back office).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "KR Staffing",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
