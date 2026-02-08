@@ -1,16 +1,26 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Build a mobile-first staffing & recruitment job portal website for KR Staffing with a clean, trust-building design (white + red accents), featuring job search/listings, categories, featured jobs, testimonials, contact + WhatsApp support, and simple application flow via Google Form, with an admin-friendly way to manage jobs.",
+  "projectStateVersion": 15,
+  "summary": "Align site UI/UX to closely match the reference site (https://srfastconnectstaffing.cloud/) for overall layout/sections/look-and-feel, while keeping KR Staffing branding (company name + contact details) and keeping a red theme (no alternate color palette changes). Add trust/compliance details such as GST number in the site copy. Add KR Staffing official address + email, optionally show key team contact (HR), and add credibility sections such as company registration year and (if permitted) client/partner logos plus sample employment document templates (offer letter, salary proof, ID card, earnings example).",
   "architectural_notes": [
     "Mobile-first responsive, fast-loading site with simple navigation",
     "Branding: white background with red highlight color; clean/professional trust-building look",
     "Application handling via external Google Form (no in-site application processing)",
-    "Integrations: WhatsApp click-to-chat; social links (Instagram, WhatsApp channel)"
+    "Integrations: WhatsApp click-to-chat; social links (Instagram, WhatsApp channel)",
+    "Update WhatsApp click-to-chat contact number to 6204740913 (ensure it is set via the single frontend configuration source for social/contact links).",
+    "Use https://srfastconnectstaffing.cloud/ as the primary reference for UI/UX structure and page composition; keep functionality/sections the same where feasible and only change branding (company name, contact details) and color palette.",
+    "Keep red as the primary accent theme (do not switch to a different color palette).",
+    "Add trust/compliance copy such as GST No. 10LBSPK2936F1ZI in appropriate UI locations (e.g., footer and/or Contact/About pages).",
+    "Do not include any SR Fast Connect branding/content on the KR Staffing site; ensure all references/logos/text are KR Staffing only.",
+    "Company contact details (address/email/phone/social) should be configurable from the single frontend configuration module and rendered consistently in Header/Footer/Contact/About."
   ],
-  "known_issues": [],
+  "known_issues": [
+    "User indicates SR Fast Connect branding/content may still be present and wants it removed; also requests adding the correct KR Staffing logo (logo asset not yet provided/identified).",
+    "Potential trademark/compliance risk: user requested displaying third-party brand logos (Blinkit/Zomato/Swiggy/Zepto/etc.)—needs confirmation of permission or alternative text-only rendering.",
+    "User requests adding the KR Staffing logo, but the logo image file/asset has not been provided in the conversation (need the actual file and desired placement: header/footer/favicon)."
+  ],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Minimal, professional KR Staffing wordmark logo in red/black on transparent background (kr-staffing-logo.dim_512x128.png)\n- Square favicon with KR Staffing initials in red on white background (kr-staffing-favicon.dim_128x128.png)\n- Simple flat hero illustration representing job search (abstract people + checklist + location pin) with red accents on white background (hero-illustration.dim_1200x600.png)",
+  "imageRequirements": "## Required Images\n- Uploaded KR Staffing Enterprises logo converted to a wide logo image (brand-logo.dim_512x128.png)\n- Uploaded KR Staffing Enterprises logo converted to a favicon icon (brand-favicon.dim_64x64.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-consistent-mobile-first-visual-theme-for-kr-staffing-clean-white-background-red-as-primary-accent-neutral-grays-for-borders-text-modern-readable-typography-spacious-layout-and-accessible-contrast-apply-the-theme-consistently-across-all-pages-and-components",
@@ -115,6 +125,166 @@
         "REQ-14"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-whatsapp-click-to-chat-phone-number-configuration-to-use-6204740913-so-that-all-whatsapp-entry-points-whatsapp-support-button-and-floating-whatsapp-button-open-chats-to-that-number",
+      "title": "Update the WhatsApp click-to-chat phone number configuration to use 6204740913 so that all WhatsApp entry points (WhatsApp Support button and floating WhatsApp button) open chats to that number.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-frontend-layout-and-styling-to-closely-match-the-overall-look-and-feel-spacing-section-ordering-and-visual-hierarchy-of-the-reference-website-https-srfastconnectstaffing-cloud-while-keeping-the-current-kr-staffing-job-portal-functionality-routes-job-search-categories-featured-jobs-apply-flow-contact-form-admin-ui-unchanged",
+      "title": "Update the frontend layout and styling to closely match the overall look-and-feel, spacing, section ordering, and visual hierarchy of the reference website https://srfastconnectstaffing.cloud/ while keeping the current KR Staffing job-portal functionality (routes, job search, categories, featured jobs, apply flow, contact form, admin UI) unchanged.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-branding-and-contact-identity-configurable-from-a-single-frontend-configuration-module-company-display-name-primary-support-phone-whatsapp-number-default-whatsapp-message-social-links-and-if-shown-any-contact-text-used-in-the-header-footer-contact-page-then-update-the-ui-to-render-these-values-consistently-across-header-footer-home-and-contact-pages",
+      "title": "Make branding and contact identity configurable from a single frontend configuration module: company display name, primary support phone/WhatsApp number, default WhatsApp message, social links, and (if shown) any contact text used in the header/footer/contact page; then update the UI to render these values consistently across Header, Footer, Home, and Contact pages.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-site-color-theme-to-a-new-palette-different-from-the-current-red-accent-kr-staffing-theme-by-updating-the-tailwind-css-variable-theme-tokens-so-that-the-new-colors-apply-consistently-across-all-pages-and-components",
+      "title": "Change the site color theme to a new palette (different from the current red-accent KR Staffing theme) by updating the Tailwind/CSS variable theme tokens so that the new colors apply consistently across all pages and components.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-existing-kr-staffing-brand-assets-used-by-the-ui-logo-and-favicon-with-new-generated-brand-assets-that-match-the-updated-company-name-and-updated-color-palette-and-ensure-the-app-uses-those-assets-in-the-header-and-browser-tab",
+      "title": "Replace existing KR Staffing brand assets used by the UI (logo and favicon) with new generated brand assets that match the updated company name and updated color palette, and ensure the app uses those assets in the header and browser tab.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-branding-so-the-company-name-is-kr-staffing-everywhere-it-appears-in-the-ui-including-header-logo-alt-text-footer-copy-about-page-copy-privacy-policy-terms-conditions-whatsapp-default-message-and-html-title-meta-description-and-remove-any-remaining-sr-fast-connect-text-from-user-facing-content",
+      "title": "Update branding so the company name is \"KR Staffing\" everywhere it appears in the UI (including header logo alt text, footer copy, About page copy, Privacy Policy, Terms & Conditions, WhatsApp default message, and HTML <title>/<meta description>), and remove any remaining \"SR Fast Connect\" text from user-facing content.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-site-uses-a-red-primary-theme-white-background-with-red-as-the-primary-accent-consistently-across-components-and-revert-adjust-any-theme-tokens-that-currently-cause-the-primary-color-to-appear-non-red",
+      "title": "Ensure the site uses a red primary theme (white background with red as the primary accent) consistently across components, and revert/adjust any theme tokens that currently cause the primary color to appear non-red.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-trust-compliance-line-that-includes-the-gst-number-gst-no-10lbspk2936f1zi-in-user-facing-copy-in-appropriate-site-areas-at-minimum-the-footer-and-at-least-one-of-about-page-or-contact-page-written-in-professional-trust-building-english",
+      "title": "Add a trust/compliance line that includes the GST number \"GST No. 10LBSPK2936F1ZI\" in user-facing copy in appropriate site areas (at minimum the Footer, and at least one of: About page or Contact page), written in professional, trust-building English.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-overall-layout-look-and-feel-closely-matching-https-srfastconnectstaffing-cloud-while-retaining-the-existing-kr-staffing-job-portal-functionality-routes-search-categories-featured-jobs-apply-flow-contact-form-admin-ui-unchanged",
+      "title": "Keep the overall layout/look-and-feel closely matching https://srfastconnectstaffing.cloud/ while retaining the existing KR Staffing job portal functionality (routes, search, categories, featured jobs, apply flow, contact form, admin UI) unchanged.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-and-if-needed-fix-the-home-page-job-search-navigation-so-that-searching-from-the-hero-search-form-reliably-opens-the-jobs-page-and-shows-job-openings-filtered-by-the-entered-keyword-and-city",
+      "title": "Verify and, if needed, fix the Home page job search navigation so that searching from the hero search form reliably opens the Jobs page and shows job openings filtered by the entered keyword and city.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-generated-brand-image-assets-so-they-match-the-kr-staffing-company-name-while-keeping-the-red-theme-and-ensure-the-app-continues-to-load-these-assets-from-frontend-public-assets-generated-no-backend-image-routing",
+      "title": "Update the generated brand image assets so they match the \"KR Staffing\" company name while keeping the red theme, and ensure the app continues to load these assets from frontend/public/assets/generated (no backend image routing).",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-app-s-current-brand-logo-and-favicon-with-the-user-uploaded-kr-staffing-logo-artwork-while-keeping-the-existing-static-asset-paths-used-by-the-ui-logo-assets-generated-brand-logo-dim-512x128-png-favicon-assets-generated-brand-favicon-dim-64x64-png-ensure-the-header-and-footer-render-the-updated-logo-and-the-browser-tab-renders-the-updated-favicon",
+      "title": "Replace the app’s current brand logo and favicon with the user-uploaded KR Staffing logo artwork, while keeping the existing static asset paths used by the UI (logo: /assets/generated/brand-logo.dim_512x128.png, favicon: /assets/generated/brand-favicon.dim_64x64.png). Ensure the header and footer render the updated logo and the browser tab renders the updated favicon.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-central-branding-contact-configuration-to-include-the-official-company-address-and-official-email-and-ensure-these-values-are-the-single-source-of-truth-for-rendering-contact-identity-across-the-site",
+      "title": "Update the central branding/contact configuration to include the official company address and official email, and ensure these values are the single source of truth for rendering contact identity across the site.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-company-address-and-official-email-in-user-facing-ui-in-a-trust-building-way-at-minimum-in-the-footer-and-on-the-contact-page-keep-all-user-facing-text-in-english",
+      "title": "Render the company address and official email in user-facing UI in a trust-building way, at minimum in the Footer and on the Contact page; keep all user-facing text in English.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-credibility-company-details-into-about-page-copy-to-include-that-kr-staffing-was-registered-in-2023-written-conservatively-no-unrealistic-promises-and-consistent-with-the-existing-trust-compliance-tone",
+      "title": "Add credibility/company details into About page copy to include that KR Staffing was registered in 2023, written conservatively (no unrealistic promises) and consistent with the existing trust/compliance tone.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-hr-contact-or-our-team-highlight-section-that-includes-the-requested-hr-person-name-and-role-muskan-siddiqui-hr-executive-on-an-appropriate-page-about-or-contact-but-do-not-publish-any-personal-phone-numbers-ids-or-other-sensitive-identifiers",
+      "title": "Add an 'HR Contact' or 'Our Team' highlight section that includes the requested HR person name and role (Muskan Siddiqui — HR Executive) on an appropriate page (About or Contact), but do not publish any personal phone numbers, IDs, or other sensitive identifiers.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-roles-we-hire-for-and-platforms-companies-we-hire-for-credibility-section-that-mentions-delivery-and-telemarketing-roles-and-lists-requested-platform-names-implement-the-platform-list-as-text-only-by-default-and-only-render-third-party-logos-if-explicit-logo-image-files-are-provided-in-the-app-s-static-assets",
+      "title": "Add a 'Roles We Hire For' and 'Platforms/Companies We Hire For' credibility section that mentions delivery and telemarketing roles and lists requested platform names; implement the platform list as text-only by default, and only render third-party logos if explicit logo image files are provided in the app’s static assets.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-documents-samples-section-that-provides-view-download-links-for-sample-templates-offer-letter-salary-proof-id-card-and-an-earnings-example-host-these-as-static-assets-under-frontend-public-assets-generated-and-present-them-as-clearly-labeled-samples-templates-not-real-documents",
+      "title": "Add a 'Documents & Samples' section that provides view/download links for sample templates: Offer Letter, Salary Proof, ID Card, and an Earnings Example; host these as static assets under `frontend/public/assets/generated` and present them as clearly labeled samples/templates (not real documents).",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-site-s-brand-logo-static-asset-with-the-user-uploaded-kr-staffing-logo-artwork-keeping-the-existing-static-asset-path-assets-generated-brand-logo-dim-512x128-png-so-the-header-and-footer-continue-to-display-the-updated-logo-without-code-changes",
+      "title": "Replace the site’s brand logo static asset with the user-uploaded KR Staffing logo artwork, keeping the existing static asset path `/assets/generated/brand-logo.dim_512x128.png` so the Header and Footer continue to display the updated logo without code changes.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-set-a-matching-favicon-derived-from-the-uploaded-logo-artwork-keeping-the-existing-favicon-path-assets-generated-brand-favicon-dim-64x64-png-referenced-by-frontend-index-html",
+      "title": "Generate and set a matching favicon derived from the uploaded logo artwork, keeping the existing favicon path `/assets/generated/brand-favicon.dim_64x64.png` referenced by `frontend/index.html`.",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -166,6 +336,54 @@
       "reqIds": [
         "REQ-9"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Clone/match the overall layout, sections, and UX of https://srfastconnectstaffing.cloud/ while changing only branding elements (company name, contact details) and the site color theme to KR Staffing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add trust/compliance details (e.g., GST No. 10LBSPK2936F1ZI) to appropriate site areas (footer/contact/about) in a professional trust-building line",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Remove any remaining SR Fast Connect branding/content from the KR Staffing site and replace with the correct KR Staffing logo (use only KR Staffing branding)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Add/update KR Staffing official contact details across the site (address and official email infokrstaffing@gmail.com) in footer + Contact/About areas, sourced from the single frontend configuration module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add a credibility section for company details such as 'Company registered in 2023' in appropriate site copy (e.g., About/Contact/footer)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add a 'We hire for' / client platforms section showing delivery/telemarketing roles and (if legally permitted) brand logos for Blinkit, Zomato, Swiggy, Zepto, Swiggy Instamart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add a team/contact highlight for HR: include 'Muskan Siddiqui' as HR (title/position) in an appropriate page/section (e.g., About/Contact)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add a resources/documents section with examples/templates: earnings example, offer letter, salary proof, ID card (as static downloadable/viewable assets)",
+      "reqIds": [],
       "status": "pending"
     }
   ],

@@ -1,6 +1,6 @@
 import { SiWhatsapp } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
-import { krStaffingConfig } from '../../config/krStaffing';
+import { brandConfig } from '../../config/brand';
 
 interface WhatsAppButtonProps {
   message?: string;
@@ -9,7 +9,7 @@ interface WhatsAppButtonProps {
 
 export default function WhatsAppButton({ message, className }: WhatsAppButtonProps) {
   const handleClick = () => {
-    const { phoneNumber, defaultMessage } = krStaffingConfig.whatsapp;
+    const { phoneNumber, defaultMessage } = brandConfig.contact.whatsapp;
     const text = encodeURIComponent(message || defaultMessage);
     const url = `https://wa.me/${phoneNumber}?text=${text}`;
     window.open(url, '_blank', 'noopener,noreferrer');

@@ -1,297 +1,61 @@
 {
   "kind": "build_request",
-  "title": "KR Staffing job portal (trust-building, mobile-first) with job listings and admin job management",
+  "title": "Add user-uploaded KR Staffing logo as site brand logo (and favicon)",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Implement a consistent, mobile-first visual theme for KR Staffing: clean white background, red as primary accent, neutral grays for borders/text, modern readable typography, spacious layout, and accessible contrast. Apply the theme consistently across all pages and components.",
+      "id": "REQ-33",
+      "text": "Replace the site’s brand logo static asset with the user-uploaded KR Staffing logo artwork, keeping the existing static asset path `/assets/generated/brand-logo.dim_512x128.png` so the Header and Footer continue to display the updated logo without code changes.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "DESIGN STYLE:\n• Simple, clean, professional\n• White background with red highlight color\n• Mobile-first responsive design\n• Easy navigation & fast loading"
+          "Plz add this logo"
         ]
       },
       "acceptanceCriteria": [
-        "All pages share a single coherent design system (colors, typography, spacing, buttons, cards).",
-        "Primary actions (e.g., Find Jobs / Apply Now) use the red accent color and meet accessible contrast.",
-        "Layouts adapt cleanly to small screens first; no horizontal overflow on common mobile widths."
+        "A new image file exists at `frontend/public/assets/generated/brand-logo.dim_512x128.png`.",
+        "The Header logo (`frontend/src/components/layout/Header.tsx` img src `/assets/generated/brand-logo.dim_512x128.png`) renders the new uploaded logo on all screen sizes.",
+        "The Footer logo (`frontend/src/components/layout/Footer.tsx` img src `/assets/generated/brand-logo.dim_512x128.png`) renders the new uploaded logo.",
+        "No routes, navigation links, or other UI behavior changes occur as part of this update."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Create the site header + navigation for KR Staffing with logo and menu links: Home, Jobs, Categories, About Us, Contact Us, Apply Now. Include optional Login/Register entry points in the header UI (not required to block job browsing).",
+      "id": "REQ-34",
+      "text": "Generate and set a matching favicon derived from the uploaded logo artwork, keeping the existing favicon path `/assets/generated/brand-favicon.dim_64x64.png` referenced by `frontend/index.html`.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "1) Header\n• KR Staffing logo\n• Menu: Home | Jobs | Categories | About Us | Contact Us | Apply Now\n• Login / Register option (optional)"
+          "Plz add this logo"
         ]
       },
       "acceptanceCriteria": [
-        "Header shows logo + the specified menu items.",
-        "Navigation works on mobile (hamburger / drawer) and desktop.",
-        "Login/Register entry points are visible but do not prevent browsing jobs when not logged in."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Build the homepage with the requested sections and English user-facing copy that matches a trust-focused tone: Hero (heading, subheading, keyword+city search + Find Jobs), Popular Job Searches, Popular Job Categories, Featured Jobs (job cards + Load More), Why Choose KR Staffing, Testimonials, Contact (WhatsApp support button + contact form), and Footer (About, Quick links, Privacy Policy, Terms & Conditions, copyright).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "HOMEPAGE SECTIONS:\n1) Header\n...\n9) Footer\n• About KR Staffing\n• Quick links\n• Privacy Policy\n• Terms & Conditions\n• © KR Staffing – All Rights Reserved"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Homepage contains all 9 sections in the order specified (may be visually rearranged for mobile, but all present).",
-        "Hero search has fields for keyword and city and a Find Jobs button that takes the user to Jobs with filters applied.",
-        "Featured Jobs renders job cards with Title, Location, Company, and Apply Now; Load More loads additional jobs without a full page refresh."
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Implement a Jobs listing page with search and filters for keyword and city, rendering job cards with title, location, company name, and Apply Now. Include pagination via a Load More pattern.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "FUNCTIONAL REQUIREMENTS:\n• Job listing page",
-          "2) Hero Section\n• Search bar:\n  – Job title / keyword\n  – City\n  – Button: “Find Jobs”",
-          "5) Featured Jobs Section\n• Load More Jobs button"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Jobs page supports filtering by keyword and city.",
-        "Job cards show title, location, company, and Apply Now.",
-        "Load More fetches the next page and appends results; a loading state is shown."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Implement a Categories page that lists the provided categories and allows users to click into a filtered Jobs view by category.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "4) Popular Job Categories\n• Delivery\n• Sales Executive\n• Telecaller\n• Field Executive\n• Warehouse\n• Back Office\n• Marketing / Digital"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Categories page renders the listed categories as clickable items.",
-        "Clicking a category navigates to Jobs filtered by that category.",
-        "The selected category is reflected in the UI (e.g., filter pill or heading)."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Add About Us, Contact Us, Privacy Policy, and Terms & Conditions pages with simple, trust-building English copy describing KR Staffing’s process and avoiding unrealistic claims.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "CONTENT TONE:\n• Simple English + Hindi mix\n• Trust-focused\n• No fake promises\n• Clear job process explanation",
-          "9) Footer\n• Privacy Policy\n• Terms & Conditions"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Each page is reachable from header/footer links.",
-        "Copy is clear and trust-focused and does not contain exaggerated guarantees.",
-        "Pages are responsive and match the site theme."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Implement the Apply Now flow so that all Apply Now buttons (Featured Jobs and Jobs page) open a configurable Google Form URL (in a new tab). If possible, include job title and city as prefilled query parameters when the Google Form supports it; otherwise open the base form URL.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "FUNCTIONAL REQUIREMENTS:\n• Apply form linked to Google Form",
-          "5) Featured Jobs Section\n• Apply Now button"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Apply Now opens a Google Form URL configured in the app (not hard-coded to an unknown value).",
-        "Opens in a new tab and does not break SPA navigation.",
-        "If prefill is configured, the job title/city are passed through correctly; otherwise it still opens the form."
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Add WhatsApp click-to-chat integration via a prominent WhatsApp support button (homepage contact section and optionally a floating action button). Also add Instagram and WhatsApp channel links in the footer/contact area. All links must be configurable (phone number / URLs) via a single frontend configuration file.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "8) Contact Section\n• WhatsApp support button",
-          "FUNCTIONAL REQUIREMENTS:\n• WhatsApp click-to-chat integration\n• Instagram & WhatsApp channel links"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Clicking the WhatsApp button opens wa.me or api.whatsapp.com with the configured phone number/message.",
-        "Instagram and WhatsApp channel links are visible and open the configured URLs.",
-        "All social/contact URLs are stored in one configuration location and can be changed without touching multiple components."
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "text": "Create backend data models and APIs for job management, including: create job, update job, list jobs (with pagination), and search/filter by keyword, city, and category. Seed the system with a small set of example jobs matching the portal’s domain (delivery/telecaller/field exec/warehouse/back office).",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Admin can add/edit jobs easily",
-          "Find delivery, telecaller, field executive & warehouse jobs near you"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Backend exposes methods to create and update jobs.",
-        "Backend exposes a list/search method supporting pagination and the specified filters.",
-        "A fresh deployment shows example jobs without requiring admin input first."
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "text": "Build an admin-friendly job management UI where an authenticated admin can add/edit jobs easily (title, company, city/location, category, description, and any optional metadata like salary/type). Gate admin actions behind Internet Identity and a backend admin allowlist of principals.",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "FUNCTIONAL REQUIREMENTS:\n• Admin can add/edit jobs easily",
-          "• Login / Register option (optional)"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Non-authenticated users cannot access admin create/edit actions (UI and backend enforce this).",
-        "Authenticated admin can create a new job and see it appear on Jobs and Featured Jobs.",
-        "Authenticated admin can edit an existing job and see updates reflected on public pages."
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "text": "Implement the homepage Contact form (name, mobile number, city, message) to submit to the backend and store inquiries for admin review in the admin area (read-only list is sufficient).",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "8) Contact Section\n• Contact form:\n  – Name\n  – Mobile number\n  – City\n  – Message"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Submitting the contact form shows success/error states and does not reload the page.",
-        "Inquiry data is persisted in the backend.",
-        "Admin can view a list of submitted inquiries in the admin UI."
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Ensure performance and UX basics: fast initial load, skeleton/loading states for job lists, empty states (no jobs found), and clear error messaging. Keep navigation simple and consistent.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Easy navigation & fast loading"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Jobs/Featured Jobs show loading indicators and handle errors gracefully.",
-        "When no results match filters, an empty state is shown with guidance to change filters.",
-        "Key pages score well on basic Lighthouse-style checks (no major layout shift, images optimized, minimal blocking UI)."
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "text": "Use English for all user-facing text throughout the app (including headings, buttons, testimonials, labels). Maintain a trust-building tone and clearly describe the job application process without unrealistic promises.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Use English for any user-facing text in the build request.",
-          "Trust-focused\n• No fake promises\n• Clear job process explanation"
-        ]
-      },
-      "acceptanceCriteria": [
-        "No Hindi/mixed-language copy is shown in the UI; all visible UI strings are English.",
-        "Copy explains the process (search jobs → apply via form → staffing team contacts) without guarantees.",
-        "Testimonials read as realistic, short success stories (no extreme claims)."
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Add static asset handling for generated brand images: include the generated logo and favicon in the header and browser tab, and ensure they are served as static files from frontend/public/assets/generated.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "• KR Staffing logo"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Logo renders in the header in appropriate sizes for mobile/desktop.",
-        "Favicon is set and visible in the browser tab.",
-        "Assets are referenced from frontend/public/assets/generated (not fetched from backend)."
+        "A new image file exists at `frontend/public/assets/generated/brand-favicon.dim_64x64.png`.",
+        "`frontend/index.html` continues to reference `/assets/generated/brand-favicon.dim_64x64.png` and the browser tab favicon updates to the new icon after refresh.",
+        "The favicon is visually legible at small sizes (16–32px) and not cropped awkwardly."
       ]
     }
   ],
   "constraints": [
-    "Backend must remain a single Motoko actor (no additional backend services).",
-    "Do not modify any frontend files under immutablePaths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui (compose instead).",
-    "No external databases or third-party auth providers; Internet Identity only if auth is implemented.",
-    "No email/SMS sending integrations; contact form must store data in-app instead of sending email."
+    "Keep the existing static asset paths used by the UI: `/assets/generated/brand-logo.dim_512x128.png` and `/assets/generated/brand-favicon.dim_64x64.png`.",
+    "Serve logo and favicon as static frontend assets under `frontend/public/assets/generated` (no backend image routing).",
+    "Do not modify any files under `frontend/src/components/ui` or other `frontend.immutablePaths` listed in SYSTEM_CONTEXT.",
+    "Use English for any user-facing text (no copy changes are required for this request)."
   ],
   "nonGoals": [
-    "Building an enterprise-focused staffing SaaS for multiple companies (this site is only for KR Staffing).",
-    "Implementing real-time chat, push notifications, or WebSockets.",
-    "Payments, subscriptions, or paid job postings.",
-    "Advanced ATS features (resume parsing, interview scheduling, background checks)."
+    "Do not change the site color theme, layout, routes, or any job portal functionality.",
+    "Do not add new navigation items or modify the admin/auth flows."
   ],
   "imageRequirements": {
     "required": [
-      "Minimal, professional KR Staffing wordmark logo in red/black on transparent background (kr-staffing-logo.dim_512x128.png)",
-      "Square favicon with KR Staffing initials in red on white background (kr-staffing-favicon.dim_128x128.png)",
-      "Simple flat hero illustration representing job search (abstract people + checklist + location pin) with red accents on white background (hero-illustration.dim_1200x600.png)"
+      "Uploaded KR Staffing Enterprises logo converted to a wide logo image (brand-logo.dim_512x128.png)",
+      "Uploaded KR Staffing Enterprises logo converted to a favicon icon (brand-favicon.dim_64x64.png)"
     ],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

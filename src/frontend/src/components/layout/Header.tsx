@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import AuthButtons from '../auth/AuthButtons';
 import { useIsCallerAdmin } from '../../hooks/useQueries';
+import { brandConfig } from '../../config/brand';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,8 +31,8 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
-              src="/assets/generated/kr-staffing-logo.dim_512x128.png"
-              alt="KR Staffing"
+              src="/assets/generated/brand-logo.dim_512x128.png"
+              alt={brandConfig.company.name}
               className="h-8 w-auto sm:h-10"
             />
           </Link>

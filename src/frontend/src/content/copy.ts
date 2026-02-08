@@ -1,3 +1,5 @@
+import { brandConfig } from '../config/brand';
+
 export const copy = {
   hero: {
     heading: 'Explore New Job Opportunities Just For You',
@@ -21,7 +23,7 @@ export const copy = {
     ],
   },
   whyChoose: {
-    title: 'Why Choose KR Staffing',
+    title: `Why Choose ${brandConfig.company.name}`,
     items: [
       {
         title: 'Verified Jobs',
@@ -56,7 +58,7 @@ export const copy = {
       {
         name: 'Priya Sharma',
         role: 'Telecaller',
-        text: 'KR Staffing helped me get a telecaller position. The application process was simple and fast.',
+        text: `${brandConfig.company.name} helped me get a telecaller position. The application process was simple and fast.`,
       },
       {
         name: 'Amit Patel',
@@ -66,16 +68,37 @@ export const copy = {
     ],
   },
   about: {
-    title: 'About KR Staffing',
-    content: `KR Staffing is your trusted partner for finding quality job opportunities. We connect job seekers with verified employers across delivery, telecalling, field operations, warehouse, and office roles.
+    title: `About ${brandConfig.company.name}`,
+    content: `${brandConfig.company.name} is your trusted partner for finding quality job opportunities. Registered in ${brandConfig.company.registrationYear}, we connect job seekers with verified employers across delivery, telecalling, field operations, warehouse, and office roles.
 
 Our process is simple: Browse jobs on our portal, apply through our form, and our team will connect you with the right employers. We focus on local opportunities to help you find work near your home.
 
 We believe in transparency and trust. Every job listing is verified, and our support team is available to assist you throughout your job search journey.`,
   },
+  trust: {
+    gstLine: 'GST No. 10LBSPK2936F1ZI',
+    complianceNote: `${brandConfig.company.name} is a registered staffing company committed to transparency and compliance. We verify all job listings and maintain professional standards in connecting job seekers with employers.`,
+  },
+  credibility: {
+    title: 'Roles We Hire For',
+    description: 'We connect job seekers with opportunities across multiple platforms and companies',
+    platformsTitle: 'Hiring For',
+  },
+  hrContact: {
+    title: 'HR Contact',
+    description: 'Our HR team is here to assist you with your job search',
+  },
+  documents: {
+    title: 'Documents & Samples',
+    description: 'View sample templates for reference. These are examples only and do not guarantee employment or specific earnings.',
+    disclaimer: 'Note: These are sample templates for reference purposes only.',
+    viewButton: 'View Sample',
+    downloadButton: 'Download',
+  },
   contact: {
     title: 'Get In Touch',
     description: 'Have questions? Reach out to us and our team will get back to you.',
+    companyDetailsTitle: 'Company Details',
     form: {
       name: 'Your Name',
       mobile: 'Mobile Number',
@@ -88,7 +111,7 @@ We believe in transparency and trust. Every job listing is verified, and our sup
   },
   privacy: {
     title: 'Privacy Policy',
-    content: `At KR Staffing, we respect your privacy and are committed to protecting your personal information.
+    content: `At ${brandConfig.company.name}, we respect your privacy and are committed to protecting your personal information.
 
 **Information We Collect**
 When you use our job portal, we collect information you provide through application forms and contact forms, including your name, mobile number, city, and any messages you send us.
@@ -111,10 +134,10 @@ If you have questions about this privacy policy, please contact us through our c
   },
   terms: {
     title: 'Terms & Conditions',
-    content: `Please read these terms carefully before using KR Staffing services.
+    content: `Please read these terms carefully before using ${brandConfig.company.name} services.
 
 **Service Description**
-KR Staffing provides a job portal connecting job seekers with employers. We verify job listings but do not guarantee employment outcomes.
+${brandConfig.company.name} provides a job portal connecting job seekers with employers. We verify job listings but do not guarantee employment outcomes.
 
 **User Responsibilities**
 - Provide accurate information in your applications
@@ -126,7 +149,7 @@ KR Staffing provides a job portal connecting job seekers with employers. We veri
 While we verify all job listings, we are not responsible for employer decisions or workplace conditions. We recommend you verify details directly with employers.
 
 **Limitation of Liability**
-KR Staffing acts as a connection platform. We are not liable for employment outcomes, disputes between job seekers and employers, or any indirect damages.
+${brandConfig.company.name} acts as a connection platform. We are not liable for employment outcomes, disputes between job seekers and employers, or any indirect damages.
 
 **Changes to Terms**
 We may update these terms from time to time. Continued use of our services constitutes acceptance of updated terms.
@@ -135,11 +158,12 @@ We may update these terms from time to time. Continued use of our services const
 For questions about these terms, please contact us through our contact form.`,
   },
   footer: {
-    about: 'KR Staffing connects job seekers with verified opportunities across delivery, telecalling, field operations, and more. Find your next job with us.',
+    about: `${brandConfig.company.name} connects job seekers with verified opportunities across delivery, telecalling, field operations, and more. Find your next job with us.`,
     quickLinks: 'Quick Links',
     legal: 'Legal',
     followUs: 'Follow Us',
-    copyright: '© 2026 KR Staffing. All Rights Reserved.',
+    contactTitle: 'Contact',
+    copyright: `© 2026 ${brandConfig.company.name}. All Rights Reserved.`,
     builtWith: 'Built with',
     caffeine: 'caffeine.ai',
   },

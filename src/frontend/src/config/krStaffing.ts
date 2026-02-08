@@ -1,17 +1,15 @@
+import { brandConfig } from './brand';
+
+// Legacy configuration module that delegates to brandConfig for backward compatibility
 export const krStaffingConfig = {
-  googleForm: {
-    baseUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform',
-    prefillParams: {
-      jobTitle: 'entry.123456789',
-      city: 'entry.987654321',
-    },
-  },
-  whatsapp: {
-    phoneNumber: '919876543210',
-    defaultMessage: 'Hello, I would like to inquire about job opportunities at KR Staffing.',
-  },
-  social: {
-    instagram: 'https://instagram.com/krstaffing',
-    whatsappChannel: 'https://whatsapp.com/channel/YOUR_CHANNEL_ID',
-  },
+  companyName: brandConfig.company.name,
+  tagline: brandConfig.company.tagline,
+  registrationYear: brandConfig.company.registrationYear,
+  address: brandConfig.company.address,
+  officialEmail: brandConfig.contact.officialEmail,
+  whatsappNumber: brandConfig.contact.whatsapp.phoneNumber,
+  whatsappMessage: brandConfig.contact.whatsapp.defaultMessage,
+  socialLinks: brandConfig.contact.social,
+  googleFormUrl: brandConfig.apply.googleForm.baseUrl,
+  googleFormPrefillParams: brandConfig.apply.googleForm.prefillParams,
 };
